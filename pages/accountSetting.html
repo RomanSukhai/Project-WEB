@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="../style/accountSetting.css">
+</head>
+
+<body>
+    <div class="profile-settings">
+        <h2>Setting Profile</h2>
+        <div class="current-profile-picture">
+            <img src="../images/bg_log_and_sign.webp" alt="Теперішнє фото профілю">
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="profile-picture">Change profile photo
+                </label>
+                <input type="file" id="profile-picture" name="profile-picture">
+            </div>
+            <div class="form-group">
+                <label for="favorite-genres">Favorite genres
+                </label>
+                <select multiple id="favorite-genres" name="favorite-genres">
+                    <option value="action">Action film
+                    </option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notifications">Notification</label>
+                <input type="checkbox" id="notifications" name="notifications"> Turn on notifications
+            </div>
+            <div class="form-group">
+                <label for="theme">
+                    Choose thems</label>
+                <select id="theme" name="theme">
+                    <option value="light">light</option>
+                    <option value="dark">dark</option>
+                </select>
+            </div>
+            <button type="submit">Save changes</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "QuicksandReg";
+  src: url("../fonts/Quicksand-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "QuicksandBol";
+  src: url("../fonts/Quicksand-Bold.ttf") format("woff2");
+}
+body {
+  font-family: "QuicksandReg";
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+* {
+  font-family: "QuicksandBol";
+}
+
+header {
+  background: #ba86ed;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header .menu li {
+  margin: 0 20px;
+}
+header .menu li a {
+  text-decoration: none;
+  color: #000;
+  font-family: "QuicksandBol";
+}
+header .menu li a:hover {
+  color: #5f37ef;
+}
+header .menu li.active a {
+  color: #5f37ef;
+}
+header .search-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .search-container input {
+  padding: 5px;
+  margin-right: 5px;
+}
+header .search-container button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cards-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+.cards-container .card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.cards-container .card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.cards-container .card .card-body {
+  padding: 10px;
+}
+.cards-container .card .card-body h3 {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+}
+.cards-container .card .card-body .description {
+  margin: 0 0 10px 0;
+}
+.cards-container .card .card-body .rating {
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+.cards-container .card .card-body .price-container {
+  display: flex;
+  flex-direction: column;
+}
+.cards-container .card .card-body .price-container .price, .cards-container .card .card-body .price-container .vip-price {
+  font-weight: bold;
+}
+.cards-container .card .card-body .price-container .vip-price {
+  color: #5f37ef;
+}
+.cards-container .card .card-body .booking-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #5f37ef;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.cards-container .card .card-body .booking-button:hover {
+  background-color: #3f12e1;
+}
+.cards-container .card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-container p {
+  margin: 5px 0;
+}
+footer .footer-container p:first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .cards-container .card {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 768px) {
+  .cards-container .card {
+    width: calc(100% - 20px);
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */

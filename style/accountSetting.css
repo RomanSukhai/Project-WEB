@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "QuicksandReg";
+  src: url("../fonts/Quicksand-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "QuicksandBol";
+  src: url("../fonts/Quicksand-Bold.ttf") format("woff2");
+}
+* {
+  font-family: "QuicksandBol";
+}
+
+.profile-settings {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #f0f4f8;
+}
+.profile-settings .current-profile-picture {
+  margin-bottom: 20px;
+}
+.profile-settings .current-profile-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #ffffff;
+}
+.profile-settings h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+.profile-settings .form-group {
+  margin-bottom: 15px;
+}
+.profile-settings .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+}
+.profile-settings .form-group input[type=file],
+.profile-settings .form-group select,
+.profile-settings .form-group input[type=checkbox] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.profile-settings .form-group input[type=checkbox] {
+  width: auto;
+}
+.profile-settings button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e63946;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.profile-settings button:hover {
+  background-color: #003d82;
+}/*# sourceMappingURL=accountSetting.css.map */

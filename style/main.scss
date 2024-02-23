@@ -1,0 +1,184 @@
+@import 'variables';
+@import 'fonts';
+
+body {
+    font-family: 'QuicksandReg';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+*{
+    font-family: 'QuicksandBol';
+}
+
+header {
+    background: $header-bg;
+    padding: 10px;
+    box-shadow: 0 2px 4px $shadow-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        li {
+            margin: 0 20px;
+            a {
+                text-decoration: none;
+                color: $text-color;
+                font-family: 'QuicksandBol';
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+
+            &.active a {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .search-container {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        input {
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    }
+}
+.cards-container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+
+    .card {
+        background: $card-bg;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        width: calc(33.333% - 20px);
+        margin: 10px;
+        box-shadow: 0 2px 4px $shadow-color;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 200px; 
+            object-fit: cover;
+            object-position: center; 
+            border-top-left-radius: $border-radius; 
+            border-top-right-radius: $border-radius;
+        }
+
+        .card-body {
+            padding: 10px;
+
+            h3 {
+                font-size: 1.2em;
+                margin: 0 0 10px 0;
+            }
+
+            .description {
+                margin: 0 0 10px 0; // Додає відступ знизу для опису
+            }
+
+            .rating {
+                font-weight: bold;
+                margin: 0 0 10px 0; // Додає відступ знизу для рейтингу
+            }
+
+            .price-container {
+                display: flex;
+                flex-direction: column; // Розташовує ціни одна під одною
+
+                .price, .vip-price {
+                    font-weight: bold;
+                }
+
+                .vip-price {
+                    color: $accent-color; // Підкреслює VIP-ціну за допомогою акцентного кольору
+                }
+            }
+            .booking-button {
+                display: inline-block;
+                padding: 10px 15px;
+                background-color: $btn-bg; // Використовується змінна з вашого файлу _variables.scss
+                color: #fff;
+                text-align: center;
+                border-radius: $border-radius; // Використовується змінна з вашого файлу _variables.scss
+                text-decoration: none;
+                margin-top: 10px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            
+                &:hover {
+                    background-color: darken($btn-bg, 10%);
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 4px 8px $shadow-color;
+        }
+    }
+}
+footer {
+    background: $footer-bg;
+    color: $footer-text-color;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            margin: 5px 0;
+            &:first-child {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .cards-container .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container .card {
+        width: calc(100% - 20px);
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+

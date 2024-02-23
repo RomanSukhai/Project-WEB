@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "QuicksandReg";
+  src: url("../fonts/Quicksand-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "QuicksandBol";
+  src: url("../fonts/Quicksand-Bold.ttf") format("woff2");
+}
+* {
+  box-sizing: border-box;
+  font-family: "QuicksandReg";
+}
+
+body {
+  background-image: url("../images/bg_log_and_sign.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.251);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+.container {
+  background: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.form-container {
+  flex: 1;
+  padding: 50px;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container form h1 {
+  font-size: 1.5em;
+  font-family: "QuicksandBol";
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-container form input {
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  padding: 15px;
+}
+.form-container form input:focus {
+  outline: none;
+}
+.form-container form button {
+  background: #5f37ef;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 30px;
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+.form-container form button:hover {
+  background: #3f12e1;
+}
+.form-container form .already-registered {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+.form-container form .already-registered a {
+  color: #5f37ef;
+  text-decoration: none;
+  font-weight: bold;
+}
+.form-container form .already-registered a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=login.css.map */

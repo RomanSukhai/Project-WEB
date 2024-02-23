@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "QuicksandReg";
+  src: url("../fonts/Quicksand-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "QuicksandBol";
+  src: url("../fonts/Quicksand-Bold.ttf") format("woff2");
+}
+.theater {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.theater_screen {
+  width: 500px;
+  height: 50px;
+  background-color: #333;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px 0;
+  font-family: "QuicksandBol";
+}
+.theater_seats_row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.theater_seats .seat, .theater_seats .seat.vip {
+  width: 20px;
+  height: 20px;
+  background-color: #888;
+  margin: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.theater_seats .seat:hover, .theater_seats .seat.vip:hover {
+  background-color: #555;
+}
+.theater_seats .vip-row .seat {
+  background-color: gold;
+}
+.theater_seats .vip-row .seat:hover {
+  background-color: darkgoldenrod;
+}/*# sourceMappingURL=areaSee.css.map */
