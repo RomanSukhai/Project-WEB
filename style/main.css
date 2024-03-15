@@ -25,8 +25,9 @@ header {
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   text-align: center;
 }
 header .menu {
@@ -35,14 +36,14 @@ header .menu {
   margin: 0;
   display: flex;
   justify-content: center;
-  width: 100%;
+  flex: 1;
 }
 header .menu li {
   margin: 0 20px;
 }
 header .menu li a {
   text-decoration: none;
-  color: #000;
+  color: #343a40;
   font-family: "QuicksandBol";
 }
 header .menu li a:hover {
@@ -52,10 +53,8 @@ header .menu li.active a {
   color: #5f37ef;
 }
 header .search-container {
-  margin-top: 20px;
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 header .search-container input {
   padding: 5px;
@@ -83,8 +82,7 @@ header .search-container button {
 }
 .cards-container .card img {
   width: 100%;
-  height: auto;
-  max-height: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -94,6 +92,9 @@ header .search-container button {
 }
 .cards-container .card .card-body {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .cards-container .card .card-body h3 {
   font-size: 1.2em;
@@ -127,6 +128,8 @@ header .search-container button {
   margin-top: 10px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  align-self: flex-end;
+  margin-top: auto;
 }
 .cards-container .card .card-body .booking-button:hover {
   background-color: #3f12e1;

@@ -7,62 +7,153 @@
   src: url("../fonts/Quicksand-Bold.ttf") format("woff2");
 }
 * {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+header {
+  background: #ba86ed;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+header .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+header .menu li {
+  margin: 0 20px;
+}
+header .menu li a {
+  text-decoration: none;
+  color: #343a40;
   font-family: "QuicksandBol";
+}
+header .menu li a:hover {
+  color: #5f37ef;
+}
+header .menu li.active a {
+  color: #5f37ef;
 }
 
 .profile-settings {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  background-color: #f0f4f8;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+.profile-settings .back-button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.profile-settings .back-button:hover {
+  background-color: #0062cc;
 }
 .profile-settings .current-profile-picture {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .profile-settings .current-profile-picture img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid #ffffff;
+  border: 3px solid #dee2e6;
 }
 .profile-settings h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #000;
+  margin-bottom: 30px;
+  color: #333;
+}
+.profile-settings form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .profile-settings .form-group {
-  margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 .profile-settings .form-group label {
   display: block;
-  margin-bottom: 5px;
-  color: #000;
+  margin-bottom: 8px;
+  color: #555;
 }
+.profile-settings .form-group input[type=text],
 .profile-settings .form-group input[type=file],
 .profile-settings .form-group select,
 .profile-settings .form-group input[type=checkbox] {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  background-color: #e9ecef;
 }
 .profile-settings .form-group input[type=checkbox] {
   width: auto;
+  margin-top: 2px;
 }
 .profile-settings button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  background-color: #e63946;
-  color: white;
-  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 .profile-settings button:hover {
-  background-color: #003d82;
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .profile-settings {
+    padding: 30px 10px;
+  }
+  .profile-settings .current-profile-picture img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 576px) {
+  .profile-settings {
+    padding: 20px 5px;
+  }
+  .profile-settings .current-profile-picture img {
+    width: 100px;
+    height: 100px;
+  }
+  button {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=accountSetting.css.map */
