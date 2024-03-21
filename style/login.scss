@@ -99,8 +99,41 @@ body {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
     .container {
-        flex-direction: column;
+        margin: 10px;
+        max-width: 90%;
+    }
+    
+    .form-container {
+        form {
+            h1 {
+                font-size: 20px;
+            }
+            
+            input, button {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 60%;
+    }
+    
+    .form-container {
+        padding: 30px;
+        
+        form {
+            h1 {
+                font-size: 22px;
+            }
+            
+            input, button {
+                padding: 12px;
+            }
+        }
     }
 }

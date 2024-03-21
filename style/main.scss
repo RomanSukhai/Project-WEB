@@ -1,8 +1,8 @@
-@import 'variables';
-@import 'fonts';
+@import "variables";
+@import "fonts";
 
 body {
-    font-family: 'QuicksandReg';
+    font-family: "QuicksandReg";
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,9 +11,8 @@ body {
     position: relative;
 }
 
-
-*{
-    font-family: 'QuicksandBol';
+* {
+    font-family: "QuicksandBol";
 }
 
 header {
@@ -21,25 +20,24 @@ header {
     padding: 10px;
     box-shadow: 0 2px 4px $shadow-color;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
 
+    // Стилі для меню
     .menu {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
         justify-content: center;
-        flex: 1; // або можна використати max-width з конкретним значенням
+        flex: 1;
 
         li {
             margin: 0 20px;
             a {
                 text-decoration: none;
                 color: $text-color;
-                font-family: 'QuicksandBol';
+                font-family: "QuicksandBol";
                 &:hover {
                     color: $accent-color;
                 }
@@ -51,19 +49,64 @@ header {
         }
     }
 
-    .search-container {
-        // Немає потреби вказувати width: 100%;
+    // Контейнер для пошукової панелі та вибору локації
+    .search-and-location {
         display: flex;
-        justify-content: flex-end; // Вирівнювання контейнера пошуку вправо
+        align-items: center;
 
-        input {
-            padding: 5px;
-            margin-right: 5px;
+        // Стилі для пошукової панелі
+        .search-container {
+            input {
+                padding: 5px;
+                margin-right: 5px;
+                border: none;
+                border-radius: 4px;
+            }
+
+            button {
+                padding: 5px 10px;
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+                background-color: $btn-bg;
+                color: #fff;
+
+                &:hover {
+                    background-color: darken($btn-bg, 10%);
+                }
+            }
         }
 
-        button {
+        // Стилі для вибору локації
+        .location-selector {
+            margin-left: 20px;
+            background: #333;
+            border-radius: 20px;
             padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 0.9em;
             cursor: pointer;
+
+            span {
+                margin-right: 5px;
+            }
+
+            .location-dropdown-toggle {
+                background: transparent;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+
+                img {
+                    width: 12px; // or your preferred size
+                    height: auto;
+                }
+            }
         }
     }
 }
@@ -84,11 +127,11 @@ header {
         box-shadow: 0 2px 4px $shadow-color;
 
         img {
-            width: 100%; 
-            height: 200px; 
-            object-fit: cover; 
-            object-position: center; 
-            border-top-left-radius: $border-radius; 
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: $border-radius;
             border-top-right-radius: $border-radius;
         }
 
@@ -97,7 +140,6 @@ header {
             display: flex; // встановлюємо flexbox для .card-body
             flex-direction: column; // елементи будуть слідувати у вертикальному напрямку
             justify-content: space-between; // розподіл місця між елементами в колонці
-
 
             h3 {
                 font-size: 1.2em;
@@ -117,7 +159,8 @@ header {
                 display: flex;
                 flex-direction: column; // Розташовує ціни одна під одною
 
-                .price, .vip-price {
+                .price,
+                .vip-price {
                     font-weight: bold;
                 }
 
@@ -138,7 +181,7 @@ header {
                 transition: background-color 0.3s ease;
                 align-self: flex-end; // вирівнювання кнопки по правому краю .card-body
                 margin-top: auto;
-            
+
                 &:hover {
                     background-color: darken($btn-bg, 10%);
                 }
@@ -172,19 +215,87 @@ footer {
     }
 }
 
-@media (max-width: 1024px) {
-    .cards-container .card {
-        width: calc(50% - 20px);
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cards-container {
+        .card {
+            width: 100%; // Одна карточка на рядок для планшетів
+            max-width: 500px; // Встановлюємо максимальну ширину
+            margin: 10px auto; // Центруємо карточки
+        }
+    }
+
+    header {
+        .menu li {
+            margin: 0 10px;
+            a {
+                font-size: 0.8em; // Зменшуємо розмір шрифта для посилань
+            }
+        }
+
+        .search-container {
+            input,
+            button {
+                padding: 8px 10px; // Зменшуємо padding для input і button
+                font-size: 0.8em; // Зменшуємо розмір шрифта
+            }
+        }
+
+        .location-selector {
+            span {
+                font-size: 0.8em; // Зменшуємо розмір шрифта
+            }
+        }
+
+        .cards-container .card {
+            width: 100%; // Карточки на весь екран
+            max-width: 500px; // Обмежуємо максимальну ширину
+        }
     }
 }
 
-@media (max-width: 768px) {
+// Адаптація для мобільних пристроїв
+@media (max-width: 767px) {
+    header {
+      flex-direction: column; // Переключаємо header на вертикальне вирівнювання
+  
+      .menu {
+
+        align-items: center; // Вирівнювання по центру
+  
+        li {
+          width: 100%; // Елементи меню на всю ширину
+          margin: 5px 0; // Додаємо верхній/нижній відступи
+  
+          a {
+            font-size: 0.9em; // Зменшуємо розмір шрифта
+          }
+        }
+      }
+  
+      .search-container {
+        width: 100%; // Пошук на всю ширину
+        margin-top: 10px; // Відступ зверху
+  
+        input,
+        button {
+          width: 100%; // Елементи на всю ширину
+          margin-top: 5px; // Відступи зверху для елементів
+        }
+      }
+  
+      .location-selector {
+        justify-content: space-between; // Вирівнювання елементів
+        width: 100%; // На всю ширину
+        margin-top: 10px; // Відступ зверху
+  
+        .location-dropdown-toggle {
+          margin-left: auto; // Вирівнювання по правому краю
+        }
+      }
+    }
+  
     .cards-container .card {
-        width: calc(100% - 20px);
+      width: 100%; // Карточки на весь екран
+      margin: 10px 0; // Відступи зверху та знизу
     }
-    .footer-container {
-        flex-direction: column;
-    }
-}
-
-
+  }

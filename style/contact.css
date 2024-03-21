@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "QuicksandReg";
+  src: url("../fonts/Quicksand-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "QuicksandBol";
+  src: url("../fonts/Quicksand-Bold.ttf") format("woff2");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "QuicksandBol";
+}
+
+body {
+  font-family: "QuicksandReg", sans-serif;
+  line-height: 1.6;
+  background: #e9ecef;
+  color: #212529;
+}
+
+nav {
+  background: #ba86ed;
+}
+nav .menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav .menu li {
+  margin: 0 20px;
+}
+nav .menu li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+nav .menu li a:hover {
+  color: white;
+}
+nav .menu li.active a {
+  color: #a15ae6;
+}
+
+header {
+  padding: 1rem 0;
+  text-align: center;
+  background: #ba86ed;
+  color: #f8f9fa;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #e9ecef;
+}
+
+.about-us, .contact-form {
+  background: #f8f9fa;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #b1bbc4;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  background: #343a40;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 20px;
+  width: 100%;
+}/*# sourceMappingURL=contact.css.map */

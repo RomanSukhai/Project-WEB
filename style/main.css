@@ -25,10 +25,8 @@ header {
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
 }
 header .menu {
   list-style: none;
@@ -52,17 +50,53 @@ header .menu li a:hover {
 header .menu li.active a {
   color: #5f37ef;
 }
-header .search-container {
+header .search-and-location {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
 }
-header .search-container input {
+header .search-and-location .search-container input {
   padding: 5px;
   margin-right: 5px;
+  border: none;
+  border-radius: 4px;
 }
-header .search-container button {
+header .search-and-location .search-container button {
   padding: 5px 10px;
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #5f37ef;
+  color: #fff;
+}
+header .search-and-location .search-container button:hover {
+  background-color: #3f12e1;
+}
+header .search-and-location .location-selector {
+  margin-left: 20px;
+  background: #333;
+  border-radius: 20px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+header .search-and-location .location-selector span {
+  margin-right: 5px;
+}
+header .search-and-location .location-selector .location-dropdown-toggle {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+header .search-and-location .location-selector .location-dropdown-toggle img {
+  width: 12px;
+  height: auto;
 }
 
 .cards-container {
@@ -111,7 +145,8 @@ header .search-container button {
   display: flex;
   flex-direction: column;
 }
-.cards-container .card .card-body .price-container .price, .cards-container .card .card-body .price-container .vip-price {
+.cards-container .card .card-body .price-container .price,
+.cards-container .card .card-body .price-container .vip-price {
   font-weight: bold;
 }
 .cards-container .card .card-body .price-container .vip-price {
@@ -158,16 +193,64 @@ footer .footer-container p:first-child {
   font-weight: bold;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .cards-container .card {
-    width: calc(50% - 20px);
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+  }
+  header .menu li {
+    margin: 0 10px;
+  }
+  header .menu li a {
+    font-size: 0.8em;
+  }
+  header .search-container input,
+  header .search-container button {
+    padding: 8px 10px;
+    font-size: 0.8em;
+  }
+  header .location-selector span {
+    font-size: 0.8em;
+  }
+  header .cards-container .card {
+    width: 100%;
+    max-width: 500px;
   }
 }
-@media (max-width: 768px) {
-  .cards-container .card {
-    width: calc(100% - 20px);
-  }
-  .footer-container {
+@media (max-width: 767px) {
+  header {
     flex-direction: column;
+  }
+  header .menu {
+    align-items: center;
+  }
+  header .menu li {
+    width: 100%;
+    margin: 5px 0;
+  }
+  header .menu li a {
+    font-size: 0.9em;
+  }
+  header .search-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+  header .search-container input,
+  header .search-container button {
+    width: 100%;
+    margin-top: 5px;
+  }
+  header .location-selector {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  header .location-selector .location-dropdown-toggle {
+    margin-left: auto;
+  }
+  .cards-container .card {
+    width: 100%;
+    margin: 10px 0;
   }
 }/*# sourceMappingURL=main.css.map */

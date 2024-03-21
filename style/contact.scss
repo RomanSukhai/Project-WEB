@@ -1,0 +1,101 @@
+@import 'variables';
+@import 'fonts'; // Якщо ви маєте додаткові налаштування шрифтів
+
+// Base styling
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'QuicksandBol';
+}
+
+body {
+    font-family: $font-primary;
+    line-height: 1.6;
+    background: $color-background;
+    color: $color-text;
+}
+
+// Navigation styles
+nav {
+    background: $color-nav-background;
+    .menu {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        li {
+            margin: 0 20px;
+            a {
+                color: $color-nav-links;
+                text-decoration: none;
+                &:hover {
+                    color: $color-nav-links-hover;
+                }
+            }
+            &.active a {
+                color: $color-nav-links-active;
+            }
+        }
+    }
+}
+
+// Header styles
+header {
+    padding: 1rem 0;
+    text-align: center;
+    background: $color-header-background;
+    color: $color-light;
+}
+
+// Main content and sections styling
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: $color-main-background;
+}
+
+.about-us, .contact-form {
+    background: $color-section-background;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+// Form styles
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid $color-input-border;
+    border-radius: 5px;
+    &:focus {
+        outline: none;
+        border-color: darken($color-input-border, 10%);
+    }
+}
+
+.submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    background: $color-footer-background;
+    color: $color-light;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+    width: 100%;
+}

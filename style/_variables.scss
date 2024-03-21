@@ -39,3 +39,20 @@ $button-bg-color: #007bff;
 $button-bg-hover-color: #0056b3;
 $button-text-color: #ffffff;
 $text-color: #343a40;
+
+
+//Contact
+$color-primary:#ba86ed;
+$color-dark: #343a40;
+$color-light: #f8f9fa;
+$color-background: #e9ecef;
+$color-text: #212529;
+$color-nav-background: #ba86ed;
+$color-nav-links: #ffffff;
+$color-nav-links-hover: lighten($color-nav-links, 10%);
+$color-nav-links-active: darken($color-primary, 10%);
+$color-header-background: $color-primary;
+$color-main-background: $color-background;
+$color-section-background: $color-light;
+$color-input-border: #ced4da;
+$color-footer-background: $color-dark;
